@@ -1,0 +1,45 @@
+<div class="bootstrap-wrapper mu20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-card>
+                    <mat-card-header>
+                       <span style="font-size: medium;"> {{formTile}}</span> 
+                    </mat-card-header>
+                    <mat-card-content class="mu20">
+                        <form (ngSubmit)="formSubmit()">
+                            <p>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>Title</mat-label>
+                                    <input matInput placeholder="Enter here title"   name="category.title" [(ngModel)]="category.title" type="text"
+                                        required>
+                                         
+                                    <mat-hint>Enter here title</mat-hint>
+                                    <!-- <span *ngIf="signupForm.">Username is required</span> -->
+                                </mat-form-field>
+                            </p>
+                            <p>
+                                <mat-form-field appearance="outline" class="full-width">
+                                        <mat-label>Description</mat-label>
+                                        <input matInput type="text" required placeholder="Description" name="category.description" [(ngModel)]="category.description"/>
+                                        <mat-hint>Enter description</mat-hint>
+                                </mat-form-field>
+                               
+                            </p>
+                            <div>
+
+                            </div>
+                            <div class="container" class="text-center">
+                                <button mat-raised-button color="primary" type="submit">{{formTile}}</button>
+                                <button mat-raised-button color="accent" type="reset"
+                                    style="margin-left: 20px;">Clear</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+
+
+            </div>
+        </div>
+    </div>
+</div>

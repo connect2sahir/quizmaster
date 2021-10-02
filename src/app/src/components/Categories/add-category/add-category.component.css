@@ -1,0 +1,9 @@
+mat-form-field.mat-form-field {
+    width: 500px;
+  }
+
+span{
+    position: absolute;
+    align-content: center;
+        left: 40%;
+}

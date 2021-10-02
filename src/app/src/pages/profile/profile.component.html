@@ -1,0 +1,82 @@
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="mu20 profile_card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>My Profile</mat-card-title>
+                    <mat-card-subtitle>Logged user profile</mat-card-subtitle>
+                </mat-card-header>
+                <form>
+                <table>
+                    <tr>
+                        <td><b>Username</b></td>
+                        <td><span style="margin-left: 10px;">{{loginService.getUser().username}}</span></td>
+
+                    </tr>
+                    <tr>
+                        <td><b>First Name</b></td>
+                        <td *ngIf="initial_btn==='Edit'"><span
+                                style="margin-left: 10px;">{{loginService.getUser().firstname}}</span></td>
+                        <td *ngIf="initial_btn!='Edit'"> <input type="text" name=user.firstname
+                                value="{{loginService.getUser().firstname}}" [(ngModel)]="user.firstname"  />
+                    </tr>
+                    <tr>
+                        <td><b>Last Name</b></td>
+                        <td *ngIf="initial_btn==='Edit'"><span
+                                style="margin-left: 10px;">{{loginService.getUser().lastname}}</span></td>
+                        <td *ngIf="initial_btn!='Edit'"> <input type="text" name=user.lastname
+                                value="{{loginService.getUser().lastname}}" [(ngModel)]="user.lastname" />
+
+                    </tr>
+                    <tr>
+                        <td><b>Password</b></td>
+                        <td *ngIf="initial_btn==='Edit'"><span
+                                style="margin-left: 10px;">*******</span></td>
+                        <td *ngIf="initial_btn!='Edit'"> <input type="password" name=user.password
+                                value="{{loginService.getUser().password}}" [(ngModel)]="user.password"  />
+
+                    </tr>
+                    <tr>
+                        <td><b>Email</b></td>
+                        <td *ngIf="initial_btn==='Edit'"><span
+                            style="margin-left: 10px;">{{loginService.getUser().emailid}}</span></td>
+                    <td *ngIf="initial_btn!='Edit'"> <input type="text" name=user.emailid
+                            value="{{loginService.getUser().emailid}}" [(ngModel)]="user.emailid"  />
+                    </tr>
+                    <tr>
+                        <td><b>Phone</b></td>
+                        <td *ngIf="initial_btn==='Edit'"><span
+                            style="margin-left: 10px;">{{loginService.getUser().phoneno}}</span></td>
+                    <td *ngIf="initial_btn!='Edit'"> <input  type="text" name=user.phoneno
+                            value="{{loginService.getUser().phoneno}}"  />
+                    </tr>
+                    <tr>
+                        <td><b>Enabled</b></td>
+                        <td><span style="margin-left: 10px;">{{loginService.getUser().enabled?"Yes":"No"}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>Roles</b></td>
+                        <td><span style="margin-left: 10px;"
+                                *ngFor="let x of loginService.getUser().authorities">{{x.authority}}</span></td>
+                    </tr>
+
+
+                </table>
+
+                <mat-card-actions>
+                    <button mat-raised-button type="button" color="primary"
+                        (click)="editClick()">{{initial_btn}}</button> 
+                        <button mat-raised-button type="button" color="accent"
+                        (click)="initial_btn='Edit'">Cancel</button>
+                </mat-card-actions>
+                 
+            </form>
+            </mat-card>
+        </div>
+        <div class="col-md-2 mu50">
+            <img src="../../../../assets/profiles/{{loginService.getUser().profile}}" class="profile_image"
+                tooltip="s" />
+        </div>
+    </div>
+</div>

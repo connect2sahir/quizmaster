@@ -1,0 +1,31 @@
+<div class="bootstrap-wrapper" class="mu20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-card>
+                    <mat-card-header>
+                       <span>Quiz</span> 
+                    </mat-card-header>
+                    <mat-card-content [style.overflow]="'auto'" [style.height.px]="'300'">
+                        <mat-list>
+                            <mat-list-item *ngFor="let q of quiz">
+                             <div mat-line> <mat-label class="mr20"><b>Title</b></mat-label> {{q.title}}</div>
+                            <div mat-line> <mat-label class="mr20"><b>Description</b></mat-label> {{q.description}}</div>
+                               <div mat-line> <mat-label class="mr20"><b>Total Marks</b></mat-label>{{q.maxMarks}}</div>
+                              <div mat-line> <mat-label class="mr20"><b>Number of questions</b></mat-label> {{q.numberOfQuestions}}</div>
+                             <div mat-line> <mat-label class="mr20"><b>Active</b></mat-label>  {{q.active}}</div>
+                             <div mat-line> <mat-label class="mr20"><b>Category</b></mat-label>  {{q.category.title}}</div>
+                             
+                                <button mat-raised-button (click)="update(q)" color="accent" style="margin-right: 10px;">Update</button>
+                                <button mat-raised-button (click)="delete(q.quid)" >Delete</button>
+                                <mat-divider></mat-divider>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-card-content>
+                    <mat-card-footer><button mat-raised-button color="primary" style="margin-left: 30px;margin-bottom: 10px;" (click)="add()">Add new quiz</button></mat-card-footer>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

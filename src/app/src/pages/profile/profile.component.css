@@ -1,0 +1,10 @@
+.profile_image{
+    max-width:200px;
+    max-height: 180px;
+    border-radius: 50%;
+}
+
+.profile_card{
+    width: 550px;
+    background-color: papayawhip;
+}

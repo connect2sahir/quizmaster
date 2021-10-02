@@ -1,0 +1,13 @@
+mat-card{
+    width: 950px;
+    height: 400px;
+}
+
+mat-content{
+    overflow: auto;
+    height: 350px;
+}
+span{
+    font-size: medium;
+    margin-left:40%;
+}

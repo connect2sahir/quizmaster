@@ -1,0 +1,55 @@
+<div class="bootstrap-wrapper">
+    <div class="containter">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-card>
+                    <mat-card-header>
+                        Add Quiz
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>Title</mat-label>
+                                    <input matInput type="text" required placeholder="Title" name="quiz.title" [(ngModel)]="quiz.title"/>
+                                    <mat-hint>Enter title</mat-hint>
+                            </mat-form-field>
+                           
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>Desctiption</mat-label>
+                                    <input matInput type="text" required placeholder="description" name="quiz.description" [(ngModel)]="quiz.description"/>
+                                    <mat-hint>Enter description</mat-hint>
+                            </mat-form-field>
+                           
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>Marks</mat-label>
+                                    <input matInput type="text" required placeholder="Marks" name="quiz.maxMarks" [(ngModel)]="quiz.maxMarks"/>
+                                    <mat-hint>Enter marks</mat-hint>
+                            </mat-form-field>
+                           
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>Total Questions</mat-label>
+                                    <input matInput type="text" required placeholder="questions" name="quiz.numberOfQuestions" [(ngModel)]="quiz.numberOfQuestions"/>
+                                    <mat-hint>Enter Questions</mat-hint>
+                            </mat-form-field>
+                           
+                        </p>
+                        <p>
+                                     <mat-label class="mr20">Active</mat-label>
+                                    <input  type="radio"  name="quiz.active" ngModel value="quiz.active"/>
+                                    <mat-label class="ml20 mr20">Inactive</mat-label>
+                                    <input  type="radio"  name="quiz.active" ngModel value="quiz.active"/>
+                                   
+                            
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
